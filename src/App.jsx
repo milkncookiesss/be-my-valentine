@@ -1,24 +1,23 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Question from "./Question";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-red-500">
-      Hello, Tailwind!
-    </h1>
-      <div>
-        <p>there will be something here</p>
+    <div className="flex flex-row min-h-screen justify-center items-center size-auto">
+      <div className="text-center">
+        <Question />
+        <h1>there will be something here</h1>
         <div className="flex">
-          <div className="flex-1">
+          <div className="flex-1 bg-rose-300">
             <button>a</button>
           </div>
           <div className="flex-1">
             <button>b</button>
           </div>
         </div>
-        </div>
+      </div>
     </div>
   )
 }
