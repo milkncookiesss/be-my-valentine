@@ -4,19 +4,19 @@ import Gif from './Gif';
 
 function App() {
   const [count, setCount] = useState(0);
-  const gifList = ["https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzFlZ2EwYTNyN25vaGdhb21mZTU0cGR1aXQ4bnIxNHBkNTZvOGlxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JlVkLKuxRSvLy/giphy.gif"];
+  const [valentineBool, setValentineBool] = useState(null);
   return (
-    <div className="flex flex-row min-h-screen justify-center items-center size-auto">
-      <div className="text-center">
-        <Question />
+    <div className="flex flex-row min-h-screen justify-center items-center size-auto p-auto bg-pink-300">
+      <div className="box-border box-content p-4 text-center m-auto bg-pink-200 rounded-lg">
+        <Question {...{valentineBool}}/>
         <Gif 
-          gif={{ gif: gifList[0], count }}
+          {...{ count, valentineBool }}
         />
         <div className="flex">
-          <div className="flex-1 bg-rose-300">
+          <div className="flex-1 bg-rose-300 rounded-sm" onClick={() => setValentineBool(true)}>
             <button>Yes</button>
           </div>
-          <div className="flex-1" onClick={() => setCount}>
+          <div className="flex-1 bg-fuchsia-300 rounded-sm " onClick={() => setValentineBool(false)}>
             <button>No</button>
           </div>
         </div>

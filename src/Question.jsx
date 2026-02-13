@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function Question() {
+function Question({ valentineBool }) {
   const question = "Will you be my Valentine?";
   return (
     <div>
-      <h1 className="">{ question }</h1>
+      <h1 className="font-bold">{ question }</h1>
     </div>
   )
 }
